@@ -42,7 +42,7 @@ func DE_Encrypt(key string, data []byte) ([]byte, error) {
 	return ciphertext, nil
 }
 
-func DE_EncryptFromBase64(key string, data string) ([]byte, error) {
+func DE_DecryptFromBase64(key string, data string) ([]byte, error) {
 	ciphertext, err := base64.URLEncoding.DecodeString(data)
 	if err != nil {
 		return nil, err
